@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(138, 222, 236);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
