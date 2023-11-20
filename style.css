@@ -1,11 +1,15 @@
 body {
     background-color: rgb(138, 222, 236);
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    margin: 30px;
+    padding: 30px;
+    background-color: #1F2937;
 }
 
 .container {
@@ -15,14 +19,23 @@ header {
 
 .logo {
     height: auto;
-    width: 100px;
+    width: 50px;
     transform: scaleX(-1);
 }
+
 nav {
     display: flex;
     gap: 15px;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a:link {
+    color: rgb(195, 219, 219);
+}
+
+nav a:visited {
+    color: #959699;
 }
 
 .group_img {
@@ -30,22 +43,134 @@ nav {
     width: 500px;
 }
 
-.headshot {
-    height: auto;
-    width: 200px;
-    border-radius: 20px;
-}
-
 .intro {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+    padding-bottom: 50px;
+    gap: 20px;
 }
 
-.leadership {
+#introButton {
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    width: 100px;
+    background-color: rgb(195, 219, 219);
+}
+
+.introInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 35%;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin: 0;
+    padding-bottom: 8px;
+    color: white;
+}
+
+.intro p {
+    color:rgb(138, 222, 236);
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 8px;
+}
+
+#leadership {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#leadership h2 {
     text-align: center;
+    font-size: 30px;
+    margin: 15px;
 }
 
 .teamInfo {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     font-size: 15px;
+    gap: 24px
+}
+
+
+.headshot {
+    height: auto;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.duck {
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.duck h3, .duck p {
+    padding: 0;
+    margin: 0;
+}
+
+.quote {
+    background-color: #959699;
+    font-size: 28px;
+    padding: 20px;
+}
+
+.quoteP {
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.quoteSource {
+    text-align: right;
+    font-weight: bold;
+    padding-right: 80px;
+}
+
+#signUp {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #6b91b8;
+    border-radius: 5px;
+    margin: 30px 200px;
+    font-size: 20px;
+}
+
+#signUp h3, #signUp p {
+    padding: 3px;
+    margin: 3px;
+}
+
+#signUp button {
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:rgb(199, 229, 247)
+}
+
+footer {
+    background-color: #1F2937;
+    text-align: center;
+    color: #E5E7EB;
 }
