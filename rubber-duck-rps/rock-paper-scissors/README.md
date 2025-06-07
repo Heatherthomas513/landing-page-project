@@ -1,0 +1,2 @@
+This rock-paper-scissors game was created to practice the JavaScript learned in The Odin Project Foundations course. 
+The game currently plays from the browser console, but a graphical user interface with buttons and text will be added later.
