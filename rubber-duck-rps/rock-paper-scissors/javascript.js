@@ -1,3 +1,6 @@
+let playerScore = 0;
+let computerScore = 0;
+
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
@@ -18,58 +21,45 @@ function getComputerChoice() {
 
 let playerChoice;
 
+
 function playRound(playerChoice, computerChoice) {
+    let result;
     if (playerChoice === "rubberDuck" && computerChoice === "rubberDuck") {
-        return "You both chose rubber duck. It's a tie!";
+        result = "You both chose rubber duck. It's a tie!";
     } else if (playerChoice === "rubberDuck" && computerChoice === "coder") {
-        return "Coder beats rubber duck. You lose.";
+        result = "Coder beats rubber duck. You lose.";
     } else if (playerChoice === "rubberDuck" && computerChoice === "code") {
-        return "Rubber duck beats code. You win!";
+        result = "Rubber duck beats code. You win!";
     } else if (playerChoice === "coder" && computerChoice === "coder") {
-        return "You both chose coder. It's a tie!";
+        result = "You both chose coder. It's a tie!";
     } else if (playerChoice === "coder" && computerChoice === "rubberDuck") {
-        return "Coder beats rubber duck. You win!";
+        result = "Coder beats rubber duck. You win!";
     } else if (playerChoice === "coder" && computerChoice === "code") {
-        return "Code beats coder. You lose.";
+        result = "Code beats coder. You lose.";
     } else if (playerChoice === "code" && computerChoice === "code") {
-        return "You both chose code. It's a tie!";
+        result = "You both chose code. It's a tie!";
     } else if (playerChoice === "code" && computerChoice === "coder") {
-        return "Code beats coder. You win!";
+        result = "Code beats coder. You win!";
     } else if (playerChoice === "code" && computerChoice === "rubberDuck") {
-        return "Rubber duck beats code. You lose.";
+        result = "Rubber duck beats code. You lose.";
     }
 }
 
-let playerScore = 0;
-let computerScore = 0;
+function handlePlayerChoice(choice) {
+    playerChoice = choice;
+    const computerChoice = getComputerChoice();
+    const result = playRound(playerChoice, computerChoice);
+    document.getElementById("result-text").innerText = result;
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        getComputerChoice();
-        playerChoice = prompt("Rubber duck, coder, or code?").toLowerCase();
-        let roundResult = playRound(playerChoice, computerChoice);
-        if (roundResult.includes("win")) {
-            console.log(roundResult);
-            playerScore++;
-            console.log(`Score - Player: ${playerScore} Computer: ${computerScore}`);
-        } else if (roundResult.includes("tie")) {
-            console.log(roundResult);
-            playerScore++;
-            computerScore++;
-            console.log(`Score - Player: ${playerScore} Computer: ${computerScore}`);
-        } else if (roundResult.includes("lose")) {
-            console.log(roundResult);
-            computerScore++;
-            console.log(`Score - Player: ${playerScore} Computer: ${computerScore}`);
-        }
-        }
-        if (playerScore === computerScore) {
-            console.log("Game over. It's a tie!");
-        } else if (playerScore > computerScore) {
-            console.log("Game over. You won!");
-        } else if (playerScore < computerScore) {
-            console.log("Game over. You lost."); 
-        } 
+    if (result.includes("win")) {
+        playerScore++;
+    } else if (result.includes("lose")) {
+        computerScore++;
     }
+}
 
-game();
+
+// Event listeners
+document.getElementById("duck").addEventListener("click", () => handlePlayerChoice("duck"));
+document.getElementById("coder").addEventListener("click", () => handlePlayerChoice("coder"));
+document.getElementById("code").addEventListener("click", () => handlePlayerChoice("code"));
