@@ -62,13 +62,13 @@ function handlePlayerChoice(choice) {
     document.getElementById("results").classList.remove("hidden");
 }
 
-/* function playAgain {
+function playAgain() {
     document.getElementById("results").classList.add("hidden");
     document.getElementById("buttons").classList.remove("hidden");
-} */
+} 
 
 // Event listeners
-//document.getElementById("play-again").addEventListener("click", () => playAgain());
+document.getElementById("play-again").addEventListener("click", () => playAgain());
 document.getElementById("duck").addEventListener("click", () => handlePlayerChoice("duck"));
 document.getElementById("coder").addEventListener("click", () => handlePlayerChoice("coder"));
 document.getElementById("code").addEventListener("click", () => handlePlayerChoice("code"));
