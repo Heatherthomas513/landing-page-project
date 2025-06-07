@@ -10,7 +10,7 @@ let computerChoice;
 function getComputerChoice() { 
     let randomNumber = getRandomNumber(1, 3);
     if (randomNumber === 1) {
-        computerChoice = "rubberDuck";
+        computerChoice = "duck";
     } else if (randomNumber === 2) {
         computerChoice = "coder";
     } else if (randomNumber === 3) {
@@ -21,18 +21,17 @@ function getComputerChoice() {
 
 let playerChoice;
 
-
 function playRound(playerChoice, computerChoice) {
     let result;
-    if (playerChoice === "rubberDuck" && computerChoice === "rubberDuck") {
+    if (playerChoice === "duck" && computerChoice === "duck") {
         result = "You both chose rubber duck. It's a tie!";
-    } else if (playerChoice === "rubberDuck" && computerChoice === "coder") {
+    } else if (playerChoice === "duck" && computerChoice === "coder") {
         result = "Coder beats rubber duck. You lose.";
-    } else if (playerChoice === "rubberDuck" && computerChoice === "code") {
+    } else if (playerChoice === "duck" && computerChoice === "code") {
         result = "Rubber duck beats code. You win!";
     } else if (playerChoice === "coder" && computerChoice === "coder") {
         result = "You both chose coder. It's a tie!";
-    } else if (playerChoice === "coder" && computerChoice === "rubberDuck") {
+    } else if (playerChoice === "coder" && computerChoice === "duck") {
         result = "Coder beats rubber duck. You win!";
     } else if (playerChoice === "coder" && computerChoice === "code") {
         result = "Code beats coder. You lose.";
@@ -40,9 +39,10 @@ function playRound(playerChoice, computerChoice) {
         result = "You both chose code. It's a tie!";
     } else if (playerChoice === "code" && computerChoice === "coder") {
         result = "Code beats coder. You win!";
-    } else if (playerChoice === "code" && computerChoice === "rubberDuck") {
+    } else if (playerChoice === "code" && computerChoice === "duck") {
         result = "Rubber duck beats code. You lose.";
-    }
+    } 
+    return result;
 }
 
 function handlePlayerChoice(choice) {
