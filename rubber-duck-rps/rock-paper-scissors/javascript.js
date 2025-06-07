@@ -7,11 +7,11 @@ let computerChoice;
 function getComputerChoice() { 
     let randomNumber = getRandomNumber(1, 3);
     if (randomNumber === 1) {
-        computerChoice = "rock";
+        computerChoice = "rubberDuck";
     } else if (randomNumber === 2) {
-        computerChoice = "paper";
+        computerChoice = "coder";
     } else if (randomNumber === 3) {
-        computerChoice = "scissors";
+        computerChoice = "code";
     }
     return computerChoice;
 }
@@ -19,24 +19,24 @@ function getComputerChoice() {
 let playerChoice;
 
 function playRound(playerChoice, computerChoice) {
-    if (playerChoice === "rock" && computerChoice === "rock") {
-        return "You both chose rock. It's a tie!";
-    } else if (playerChoice === "rock" && computerChoice === "paper") {
-        return "Paper beats rock. You lose.";
-    } else if (playerChoice === "rock" && computerChoice === "scissors") {
-        return "Rock beats scissors. You win!";
-    } else if (playerChoice === "paper" && computerChoice === "paper") {
-        return "You both chose paper. It's a tie!";
-    } else if (playerChoice === "paper" && computerChoice === "rock") {
-        return "Paper beats rock. You win!";
-    } else if (playerChoice === "paper" && computerChoice === "scissors") {
-        return "Scissors beats paper. You lose.";
-    } else if (playerChoice === "scissors" && computerChoice === "scissors") {
-        return "You both chose scissors. It's a tie!";
-    } else if (playerChoice === "scissors" && computerChoice === "paper") {
-        return "Scissors beats paper. You win!";
-    } else if (playerChoice === "scissors" && computerChoice === "rock") {
-        return "Rock beats scissors. You lose.";
+    if (playerChoice === "rubberDuck" && computerChoice === "rubberDuck") {
+        return "You both chose rubber duck. It's a tie!";
+    } else if (playerChoice === "rubberDuck" && computerChoice === "coder") {
+        return "Coder beats rubber duck. You lose.";
+    } else if (playerChoice === "rubberDuck" && computerChoice === "code") {
+        return "Rubber duck beats code. You win!";
+    } else if (playerChoice === "coder" && computerChoice === "coder") {
+        return "You both chose coder. It's a tie!";
+    } else if (playerChoice === "coder" && computerChoice === "rubberDuck") {
+        return "Coder beats rubber duck. You win!";
+    } else if (playerChoice === "coder" && computerChoice === "code") {
+        return "Code beats coder. You lose.";
+    } else if (playerChoice === "code" && computerChoice === "code") {
+        return "You both chose code. It's a tie!";
+    } else if (playerChoice === "code" && computerChoice === "coder") {
+        return "Code beats coder. You win!";
+    } else if (playerChoice === "code" && computerChoice === "rubberDuck") {
+        return "Rubber duck beats code. You lose.";
     }
 }
 
@@ -46,7 +46,7 @@ let computerScore = 0;
 function game() {
     for (let i = 0; i < 5; i++) {
         getComputerChoice();
-        playerChoice = prompt("Rock, paper, or scissors?").toLowerCase();
+        playerChoice = prompt("Rubber duck, coder, or code?").toLowerCase();
         let roundResult = playRound(playerChoice, computerChoice);
         if (roundResult.includes("win")) {
             console.log(roundResult);
