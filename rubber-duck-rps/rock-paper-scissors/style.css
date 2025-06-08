@@ -14,9 +14,15 @@ body {
 
 header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 30px;
     background-color: #1F2937;
+}
+
+.logo {
+    height: auto;
+    width: 50px;
+    transform: scaleX(-1);
 }
 
 .container {
@@ -51,7 +57,14 @@ nav a:visited {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.buttonImg {
+    height: auto;
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 5px;
 }
 
 #results {
