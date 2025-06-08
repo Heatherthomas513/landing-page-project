@@ -25,9 +25,8 @@ body {
 }
 
 header {
-    display: flex;
-    padding: 30px;
     background-color: #1F2937;
+    padding: 10px;
 }
 
 .logo {
@@ -40,6 +39,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav {
