@@ -26,21 +26,21 @@ function playRound(playerChoice, computerChoice) {
     if (playerChoice === "duck" && computerChoice === "duck") {
         result = "You both chose rubber duck. It's a tie!";
     } else if (playerChoice === "duck" && computerChoice === "coder") {
-        result = "Coder beats rubber duck. You lose.";
+        result = "Coder throws rubber duck out the window! You lose.";
     } else if (playerChoice === "duck" && computerChoice === "code") {
-        result = "Rubber duck beats code. You win!";
+        result = "Rubber duck debugs the code. You win!";
     } else if (playerChoice === "coder" && computerChoice === "coder") {
         result = "You both chose coder. It's a tie!";
     } else if (playerChoice === "coder" && computerChoice === "duck") {
-        result = "Coder beats rubber duck. You win!";
+        result = "Coder throws rubber duck out the window! You win!";
     } else if (playerChoice === "coder" && computerChoice === "code") {
-        result = "Code beats coder. You lose.";
+        result = "Code confounds the coder. You lose.";
     } else if (playerChoice === "code" && computerChoice === "code") {
         result = "You both chose code. It's a tie!";
     } else if (playerChoice === "code" && computerChoice === "coder") {
-        result = "Code beats coder. You win!";
+        result = "Code confounds the coder. You win!";
     } else if (playerChoice === "code" && computerChoice === "duck") {
-        result = "Rubber duck beats code. You lose.";
+        result = "Rubber duck debugs the code. You lose.";
     } 
     return result;
 }
@@ -56,6 +56,10 @@ function handlePlayerChoice(choice) {
     } else if (result.includes("lose")) {
         computerScore++;
     }
+
+    //Update the scoreboard
+    document.getElementById("playerScore").innerText = "Player Score: " + playerScore;
+    document.getElementById("computerScore").innerText = "Computer Score: " + computerScore;
 
     //Hide the buttons and show the results
     document.getElementById("buttons").classList.add("hidden");
