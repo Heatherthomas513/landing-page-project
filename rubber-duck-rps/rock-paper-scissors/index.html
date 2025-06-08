@@ -5,16 +5,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
         <title>Rubber Duck Coder Code</title>
     </head>
     <body>
-        <div class="container">
-            <header>
+        <header>
+            <div class="container">
                 <div>
                     <img class="logo" src="../../images/duckLogo.png" alt="Rubber Duck logo">
-                </div>
-                <div>
-                    <h1>Rubber Duck Coder Code</h1>
                 </div>
                 <div>
                     <nav>
@@ -24,14 +24,28 @@
                         <a href="../../index.html#signUp">Sign Up</a>
                     </nav>
                 </div>
-            </header>
         </div>
-        
+        </header>
         <div id="main">
             <div id ="buttons">
-                <img src="images/game-sunny.jpg" class="buttonImg" id="duck" alt="Select rubber duck">
-                <img src="images/coder.png" class="buttonImg" id="coder" alt="Select coder">
-                <img src="images/code.png" class="buttonImg" id="code" alt="Select code">
+                <div>
+                    <h1 class="button-title">
+                        Rubber Duck
+                    </h1>
+                    <img src="images/game-sunny.jpg" class="buttonImg" id="duck" alt="Select rubber duck">
+                </div>
+                <div>
+                    <h1 class="button-title">
+                        Coder
+                    </h1>
+                    <img src="images/coder.png" class="buttonImg" id="coder" alt="Select coder">
+                </div>
+                <div>
+                    <h1 class="button-title">
+                        Code
+                    </h1>
+                    <img src="images/code.png" class="buttonImg" id="code" alt="Select code">
+                </div>
             </div>
             <div class="hidden" id="results">
                 <p id="result-text"></p>
