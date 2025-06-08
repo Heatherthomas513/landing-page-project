@@ -63,11 +63,13 @@ function handlePlayerChoice(choice) {
 
     //Hide the buttons and show the results
     document.getElementById("buttons").classList.add("hidden");
+    document.getElementById("choose").classList.add("hidden");
     document.getElementById("results").classList.remove("hidden");
 }
 
 function playAgain() {
     document.getElementById("results").classList.add("hidden");
+    document.getElementById("choose").classList.remove("hidden");
     document.getElementById("buttons").classList.remove("hidden");
 } 
 

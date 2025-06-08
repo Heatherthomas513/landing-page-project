@@ -57,6 +57,13 @@ nav a:visited {
     color: #959699;
 }
 
+#choose {
+    text-align: center;
+    color: white;
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bold;
+}
+
 #main {
     display: flex;
     flex-direction: column;
@@ -77,15 +84,17 @@ nav a:visited {
 
 #result-text {
     color: white;
+    font-family: 'Major Mono Display', monospace;
 }
 
 #scoreboard {
     color: white;
+    font-family: 'Major Mono Display', monospace;
 }
 
 .buttonImg {
     height: auto;
-    width: 200px;
+    width: 180px;
     border-radius: 50%;
     margin-bottom: 5px;
     border-style: solid;
