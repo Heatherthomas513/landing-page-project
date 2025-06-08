@@ -20,26 +20,36 @@ function getComputerChoice() {
 }
 
 let playerChoice;
+let outcome;
 
 function playRound(playerChoice, computerChoice) {
     let result;
     if (playerChoice === "duck" && computerChoice === "duck") {
+        outcome = "tie";
         result = "You both chose rubber duck. It's a tie!";
     } else if (playerChoice === "duck" && computerChoice === "coder") {
+        outcome = "lose";
         result = "Coder throws rubber duck out the window! You lose.";
     } else if (playerChoice === "duck" && computerChoice === "code") {
+        outcome = "win";
         result = "Rubber duck debugs the code. You win!";
     } else if (playerChoice === "coder" && computerChoice === "coder") {
+        outcome = "tie";
         result = "You both chose coder. It's a tie!";
     } else if (playerChoice === "coder" && computerChoice === "duck") {
+        outcome = "win";
         result = "Coder throws rubber duck out the window! You win!";
     } else if (playerChoice === "coder" && computerChoice === "code") {
+        outcome = "lose";
         result = "Code confounds the coder. You lose.";
     } else if (playerChoice === "code" && computerChoice === "code") {
+        outcome = "tie";
         result = "You both chose code. It's a tie!";
     } else if (playerChoice === "code" && computerChoice === "coder") {
+        outcome = "win";
         result = "Code confounds the coder. You win!";
     } else if (playerChoice === "code" && computerChoice === "duck") {
+        outcome = "lose";
         result = "Rubber duck debugs the code. You lose.";
     } 
     return result;
@@ -51,10 +61,10 @@ function handlePlayerChoice(choice) {
     const result = playRound(playerChoice, computerChoice);
     document.getElementById("result-text").innerText = result;
 
-    if (result.includes("win")) {
-        playerScore++;
-    } else if (result.includes("lose")) {
+    if (outcome === "lose") {
         computerScore++;
+    } else if (outcome === "win") {
+        playerScore++;
     }
 
     //Update the scoreboard
