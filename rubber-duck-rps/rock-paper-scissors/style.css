@@ -2,6 +2,10 @@
     display: none !important;
 }
 
+h1 {
+    color: white;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -50,7 +54,8 @@ nav a:visited {
     flex-direction: column;
     justify-content: center; 
     align-items: center;     
-    flex: 1;                 
+    flex: 1;     
+    background-color: black;            
 }
 
 #buttons {
@@ -58,6 +63,15 @@ nav a:visited {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+#result-text {
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#scoreboard {
+    color: white;
 }
 
 .buttonImg {
