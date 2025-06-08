@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;  
-    background-color: rgb(138, 222, 236);
+    background-color: black;
     padding: 0;
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
@@ -69,8 +69,7 @@ nav a:visited {
     flex-direction: column;
     justify-content: center; 
     align-items: center;     
-    flex: 1;     
-    background-color: black;            
+    flex: 1;                 
 }
 
 #buttons {
@@ -90,6 +89,7 @@ nav a:visited {
 #scoreboard {
     color: white;
     font-family: 'Major Mono Display', monospace;
+    text-align: center;
 }
 
 .buttonImg {
@@ -105,4 +105,5 @@ nav a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 } 
