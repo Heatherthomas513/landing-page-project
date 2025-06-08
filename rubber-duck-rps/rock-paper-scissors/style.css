@@ -84,6 +84,7 @@ nav a:visited {
 #result-text {
     color: white;
     font-family: 'Major Mono Display', monospace;
+    text-align: center;
 }
 
 #scoreboard {
