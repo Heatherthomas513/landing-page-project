@@ -78,7 +78,7 @@ nav a:visited {
     align-items: flex-start;
     flex-wrap: wrap;
     font-size: 15px;
-    gap: 24px
+    gap: 1px 30px;
 }
 
 #result-text {
@@ -108,3 +108,9 @@ nav a:visited {
     align-items: center;
     text-align: center;
 } 
+
+footer {
+    background-color: #1F2937;
+    text-align: center;
+    color: #E5E7EB;
+}

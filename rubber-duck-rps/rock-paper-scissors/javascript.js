@@ -88,3 +88,8 @@ document.getElementById("play-again").addEventListener("click", () => playAgain(
 document.getElementById("duck").addEventListener("click", () => handlePlayerChoice("duck"));
 document.getElementById("coder").addEventListener("click", () => handlePlayerChoice("coder"));
 document.getElementById("code").addEventListener("click", () => handlePlayerChoice("code"));
+
+
+
+
+
