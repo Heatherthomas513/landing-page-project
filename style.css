@@ -1,3 +1,7 @@
+.hidden {
+    display: none !important;
+}
+
 body {
     background-color: rgb(138, 222, 236);
     padding: 0;
@@ -168,6 +172,13 @@ a:active#debugging {
     font-size: 20px;
 }
 
+#signUpForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
 #signUp h3, #signUp p {
     padding: 3px;
     margin: 3px;
@@ -180,6 +191,10 @@ a:active#debugging {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     background-color:rgb(199, 229, 247)
+}
+
+#submit {
+    margin-top: 5px;
 }
 
 footer {

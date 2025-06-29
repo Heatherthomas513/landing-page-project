@@ -68,8 +68,22 @@
                     <p>Sign up to receive updates!</p>
                 </div>
                 <div>
-                    <button>Sign Up</button>
+                    <button id="signUpBtn">Sign Up</button>
                 </div>
+                <section id="signUpFormSec" class="hidden">
+                    <form id="signUpForm">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required>
+                        </div>
+    
+                        <button id="submit" type="submit">Submit</button>
+                    </form>
+                </section>
             </section>
             <footer>
                 <p>Copyright © Heather Thomas 2023</p>
